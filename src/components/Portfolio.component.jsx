@@ -68,7 +68,7 @@ const PortfolioWrapper = styled.div`
 const PortfolioList = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1.1fr);
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
