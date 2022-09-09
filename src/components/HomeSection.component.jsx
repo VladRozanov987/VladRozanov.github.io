@@ -26,6 +26,7 @@ const StyledHome = styled.div`
   min-height: calc(100vh - 77px);
   margin-top: 77px;
   background-image: url(${mainBg});
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

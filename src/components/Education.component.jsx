@@ -53,7 +53,7 @@ const EducationWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
   padding: 2rem 0;
@@ -61,7 +61,7 @@ const EducationWrapper = styled.div`
   text-align: center;
   min-height: calc(50vh - 36px);
   h2 {
-    color: #b41616;
+    color: #df0e0e;
     margin-bottom: 1rem;
   }
   .line {
@@ -71,7 +71,7 @@ const EducationWrapper = styled.div`
     margin: 1rem 0;
     .year {
       width: 20%;
-      color: #bb1515;
+      color: #df0e0e;
       font-size: 1.15rem;
       font-weight: bold;
       p {
@@ -81,6 +81,13 @@ const EducationWrapper = styled.div`
     .main {
       width: 80%;
       font-size: 1.15rem;
+    }
+  }
+  @media screen and (max-width: 956px) {
+    width: 100%;
+    .line > .main,
+    .year {
+      font-size: 0.9rem;
     }
   }
 `;

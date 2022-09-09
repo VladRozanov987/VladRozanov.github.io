@@ -72,14 +72,13 @@ const PortfolioList = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  height: 100%;
   .portfolio__list-item {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 200px;
+    min-height: 27vh;
     background: #fff;
     color: #b41616;
     transition: all 0.3s;
@@ -87,6 +86,12 @@ const PortfolioList = styled.div`
       opacity: 0.9;
       transform: scale(1.05);
     }
+  }
+  @media screen and (max-width: 660px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 450px) {
+    grid-template-columns: 1fr;
   }
 `;
 

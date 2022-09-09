@@ -49,8 +49,6 @@ const StyledContacts = styled.div`
 `;
 
 const ContactsWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
   width: 20%;
   margin: 0 auto;
   text-align: center;
@@ -58,5 +56,15 @@ const ContactsWrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   min-height: 10vh;
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 956px) {
+    width: 30%;
+  }
+  @media screen and (max-width: 660px) {
+    width: 70%;
+  }
 `;
 export default Contacts;
