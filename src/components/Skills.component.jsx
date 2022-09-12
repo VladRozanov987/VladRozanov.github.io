@@ -8,10 +8,9 @@ const Skills = () => {
           <h2>My Skills</h2>
           <SkillsList>
             <li>HTML5</li>
-            <li>CSS3</li>
-            <li>SCSS</li>
+            <li>CSS3, SCSS</li>
             <li>Bootstrap</li>
-            <li>JavaScript</li>
+            <li>JavaScript, TypeScript</li>
             <li>
               React{" "}
               <span>
@@ -21,6 +20,8 @@ const Skills = () => {
             <li>
               Angular <span>(a bit)</span>{" "}
             </li>
+            <li>Axios</li>
+            <li>Webpack</li>
             <li>
               A bit of testing technologies like Jest, Cypress. Actually I don't
               know them well, but ready to learn

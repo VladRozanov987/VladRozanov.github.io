@@ -31,18 +31,6 @@ const Portfolio = () => {
               <h3>Title</h3>
               <p>Description</p>
             </div>
-            <div className="portfolio__list-item">
-              <h3>Title</h3>
-              <p>Description</p>
-            </div>
-            <div className="portfolio__list-item">
-              <h3>Title</h3>
-              <p>Description</p>
-            </div>
-            <div className="portfolio__list-item">
-              <h3>Title</h3>
-              <p>Description</p>
-            </div>
           </PortfolioList>
         </PortfolioWrapper>
       </div>
@@ -56,7 +44,6 @@ const StyledPortfolio = styled.div`
 `;
 
 const PortfolioWrapper = styled.div`
-  min-height: calc(100vh - 77px);
   text-align: center;
   padding: 2rem 0;
   h2 {
@@ -68,7 +55,7 @@ const PortfolioWrapper = styled.div`
 const PortfolioList = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
@@ -78,7 +65,7 @@ const PortfolioList = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 27vh;
+    min-height: 200px;
     background: #fff;
     color: #b41616;
     transition: all 0.3s;
