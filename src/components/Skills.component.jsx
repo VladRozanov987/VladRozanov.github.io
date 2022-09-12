@@ -12,13 +12,13 @@ const Skills = () => {
             <li>Bootstrap</li>
             <li>JavaScript, TypeScript</li>
             <li>
-              React{" "}
+              React
               <span>
                 (This page was made using React, SCSS (StyledComponents) etc.)
               </span>
             </li>
             <li>
-              Angular <span>(a bit)</span>{" "}
+              Angular <span>(a bit)</span>
             </li>
             <li>Axios</li>
             <li>Webpack</li>
