@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import musicApp from "../img/music-app.png";
 
 const Portfolio = () => {
   return (
@@ -8,28 +9,24 @@ const Portfolio = () => {
           <h2>Portfolio</h2>
           <PortfolioList>
             <div className="portfolio__list-item">
-              <h3>Title</h3>
-              <p>Description</p>
+              <a href="https://vladrozanov987.github.io/music-app/">
+                <img className="portfolio-bg" src={musicApp} alt="music app" />
+              </a>
             </div>
             <div className="portfolio__list-item">
-              <h3>Title</h3>
-              <p>Description</p>
+              <p>Work in progress</p>
             </div>
             <div className="portfolio__list-item">
-              <h3>Title</h3>
-              <p>Description</p>
+              <p>Work in progress</p>
             </div>
             <div className="portfolio__list-item">
-              <h3>Title</h3>
-              <p>Description</p>
+              <p>Work in progress</p>
             </div>
             <div className="portfolio__list-item">
-              <h3>Title</h3>
-              <p>Description</p>
+              <p>Work in progress</p>
             </div>
             <div className="portfolio__list-item">
-              <h3>Title</h3>
-              <p>Description</p>
+              <p>Work in progress</p>
             </div>
           </PortfolioList>
         </PortfolioWrapper>
@@ -65,10 +62,15 @@ const PortfolioList = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 200px;
+    width: 100%;
+    height: 100%;
     background: #fff;
     color: #b41616;
     transition: all 0.3s;
+    .portfolio-bg {
+      width: 100%;
+      height: 100%;
+    }
     &:hover {
       opacity: 0.9;
       transform: scale(1.05);
