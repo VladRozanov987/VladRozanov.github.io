@@ -22,25 +22,30 @@ const Links = (props) => {
 };
 
 const StyledNav = styled.nav`
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 77px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 77px);
-    background-color: rgba(0, 0, 0, 0.9);
-    border-top: 1px solid #b41616;
-    li {
-      margin: 30px 0;
-    }
-  }
+  display: flex;
+
   @media screen and (max-width: 900px) {
     display: flex;
     align-items: center;
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 77px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 77px);
+      background-color: rgba(0, 0, 0, 0.9);
+      border-top: 1px solid #b41616;
+      li {
+        margin: 30px 0;
+        &:hover {
+          color: #b41616;
+        }
+      }
+    }
   }
 `;
 

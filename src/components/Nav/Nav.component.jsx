@@ -41,7 +41,7 @@ const NavContainer = styled.div`
   margin: 0 auto;
 `;
 
-const Title = styled.h2`
+const Title = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;

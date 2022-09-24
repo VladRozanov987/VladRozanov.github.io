@@ -1,22 +1,10 @@
 import styled from "styled-components";
+import Links from "./Links.jsx";
 
 const NavLinks = () => {
   return (
     <LinkList>
-      <ul>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#education">Education</a>
-        </li>
-        <li>
-          <a href="#portfolio">Portfolio</a>
-        </li>
-      </ul>
+      <Links />
     </LinkList>
   );
 };
