@@ -1,43 +1,55 @@
 import styled from "styled-components";
 
+//Animations
+import { motion } from "framer-motion";
+import { listAnim, edItemAnim } from "../animations";
+import { useScroll } from "../useScroll";
+
 const Education = () => {
+  const [element, controls] = useScroll();
+
   return (
     <StyledEducation id={"education"}>
       <div className="container">
-        <EducationWrapper>
+        <EducationWrapper
+          ref={element}
+          animate={controls}
+          variants={listAnim}
+          initial="hidden"
+        >
           <h2>Education</h2>
-          <div className="line">
+          <motion.div variants={edItemAnim} className="line">
             <div className="year">
               <p>2014-2018</p>
             </div>
             <div className="main">
               CIBS UBS NBU, Department of Finance and Banking, Bachelor`s Degree
             </div>
-          </div>
-          <div className="line">
+          </motion.div>
+          <motion.div variants={edItemAnim} className="line">
             <div className="year">
               <p>2018-2019</p>
             </div>
             <div className="main">
               CIBS UBS NBU, Department of Finance and Banking, Master's degree
             </div>
-          </div>
-          <div className="line">
+          </motion.div>
+          <motion.div variants={edItemAnim} className="line">
             <div className="year">
               <p>2021-2022</p>
             </div>
             <div className="main">
               IT Step Academy, Front-End Developer Course
             </div>
-          </div>
-          <div className="line">
+          </motion.div>
+          <motion.div variants={edItemAnim} className="line">
             <div className="year">
               <p>2022-...</p>
             </div>
             <div className="main">
               The Creative React and Redux Course (DevelopedByEd)
             </div>
-          </div>
+          </motion.div>
         </EducationWrapper>
       </div>
     </StyledEducation>
@@ -49,7 +61,7 @@ const StyledEducation = styled.div`
   color: white;
 `;
 
-const EducationWrapper = styled.div`
+const EducationWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -57,8 +69,6 @@ const EducationWrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   padding: 2rem 0;
-  margin: 0 auto;
-  text-align: center;
   min-height: calc(50vh - 36px);
   h2 {
     color: #df0e0e;
@@ -72,7 +82,7 @@ const EducationWrapper = styled.div`
     .year {
       width: 20%;
       color: #df0e0e;
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       font-weight: bold;
       p {
         letter-spacing: 3px;
@@ -80,7 +90,7 @@ const EducationWrapper = styled.div`
     }
     .main {
       width: 80%;
-      font-size: 1.15rem;
+      font-size: 1.25rem;
     }
   }
   @media screen and (max-width: 956px) {

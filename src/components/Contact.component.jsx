@@ -14,23 +14,32 @@ const Contacts = () => {
         <ContactsWrapper>
           <ul>
             <li>
-              <a href="https://www.instagram.com/vvladrozanov/" target="_blank">
+              <a
+                href="https://www.instagram.com/vvladrozanov/"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <AiOutlineInstagram style={{ width: "30px", height: "30px" }} />
               </a>
             </li>
             <li>
-              <a href="https://github.com/VladRozanov987" target="_blank">
+              <a
+                href="https://github.com/VladRozanov987"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <AiFillGithub style={{ width: "30px", height: "30px" }} />
               </a>
             </li>
             <li>
-              <a href="https://facebook.com/" target="_blank">
+              <a href="https://facebook.com/" rel="noreferrer" target="_blank">
                 <AiOutlineFacebook style={{ width: "30px", height: "30px" }} />
               </a>
             </li>
             <li>
               <a
                 href="https://www.linkedin.com/in/vlad-rozanov-90789b249/"
+                rel="noreferrer"
                 target="_blank"
               >
                 <AiOutlineLinkedin style={{ width: "30px", height: "30px" }} />

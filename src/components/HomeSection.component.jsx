@@ -1,26 +1,40 @@
 //Import img
 import mainBg from "../img/main-bg.webp";
 import avatar from "../img/avatar.jpg";
+
 //Styled
 import styled from "styled-components";
 
+//Framer motion
+import { motion } from "framer-motion";
+
 const HomeSection = () => {
+  const titleAnim = {
+    hidden: { scale: 0 },
+    show: { scale: 1, transition: { duration: 1 } },
+  };
+
   return (
     <StyledHome id={"about"}>
       <div className="container">
         <MainHome>
           <img src={avatar} alt="avatar" />
-          <h2>Vladyslav Rozanov</h2>
-          <p>
+          <motion.h2 variants={titleAnim} animate="show" initial="hidden">
+            Vladyslav Rozanov
+          </motion.h2>
+          <motion.p
+            animate={{ scale: 1, transition: { duration: 1, delay: 1 } }}
+            initial={{ scale: 0 }}
+          >
             Still <span>not</span> even a junior front-end developer
-          </p>
+          </motion.p>
         </MainHome>
       </div>
     </StyledHome>
   );
 };
 
-const StyledHome = styled.div`
+const StyledHome = styled(motion.div)`
   position: relative;
   width: 100%;
   min-height: calc(100vh - 77px);

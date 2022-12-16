@@ -1,31 +1,44 @@
 import styled from "styled-components";
+//Animations
+import { motion } from "framer-motion";
+import { listAnim, listItemAnim } from "../animations";
+import { useScroll } from "../useScroll";
 
 const Skills = () => {
+  const [element, controls] = useScroll();
+
   return (
     <StyledSkills id={"skills"}>
       <div className="container">
         <SkillsWrapper>
           <h2>My Skills</h2>
-          <SkillsList>
-            <li>HTML5</li>
-            <li>CSS3, SCSS</li>
-            <li>Bootstrap</li>
-            <li>JavaScript, TypeScript</li>
-            <li>
+          <SkillsList
+            variants={listAnim}
+            animate={controls}
+            ref={element}
+            initial="hidden"
+          >
+            <motion.li variants={listItemAnim}>HTML5</motion.li>
+            <motion.li variants={listItemAnim}>CSS3, SCSS</motion.li>
+            <motion.li variants={listItemAnim}>Bootstrap</motion.li>
+            <motion.li variants={listItemAnim}>
+              JavaScript, TypeScript
+            </motion.li>
+            <motion.li variants={listItemAnim}>
               React
               <span>
                 (This page was made using React, SCSS (StyledComponents) etc.)
               </span>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={listItemAnim}>
               Angular <span>(a bit)</span>
-            </li>
-            <li>Axios</li>
-            <li>Webpack</li>
-            <li>
+            </motion.li>
+            <motion.li variants={listItemAnim}>Axios</motion.li>
+            <motion.li variants={listItemAnim}>Webpack</motion.li>
+            <motion.li variants={listItemAnim}>
               A bit of testing technologies like Jest, Cypress. Actually I don't
               know them well, but ready to learn
-            </li>
+            </motion.li>
           </SkillsList>
         </SkillsWrapper>
       </div>
@@ -33,9 +46,10 @@ const Skills = () => {
   );
 };
 
-const StyledSkills = styled.div`
+const StyledSkills = styled(motion.div)`
   background-color: #1a1a1a;
   color: white;
+  overflow: hidden;
 `;
 
 const SkillsWrapper = styled.div`
@@ -54,11 +68,12 @@ const SkillsWrapper = styled.div`
   }
 `;
 
-const SkillsList = styled.ul`
+const SkillsList = styled(motion.ul)`
   flex-direction: column;
   justify-content: space-between;
   > li {
-    margin: 0.75rem 0;
+    font-size: 1.25rem;
+    margin: 0.9rem 0;
     transition: all 0.4s;
   }
   > li > span {
