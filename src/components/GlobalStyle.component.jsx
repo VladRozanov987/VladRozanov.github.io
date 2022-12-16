@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Aboreto', cursive;
+    font-family: 'Aboreto', serif;
     scroll-behavior: smooth;
   }
 

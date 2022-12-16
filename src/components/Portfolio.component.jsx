@@ -1,38 +1,115 @@
 import styled from "styled-components";
 import musicApp from "../img/music-app.png";
 
+//Animations
+import { motion } from "framer-motion";
+import { listAnim, edItemAnim } from "../animations";
+import { useScroll } from "../useScroll";
+
 const Portfolio = () => {
-  return (
-    <StyledPortfolio id={"portfolio"}>
-      <div className="container">
-        <PortfolioWrapper>
-          <h2>Portfolio</h2>
-          <PortfolioList>
-            <div className="portfolio__list-item">
-              <a href="https://vladrozanov987.github.io/music-app/">
-                <img className="portfolio-bg" src={musicApp} alt="music app" />
-              </a>
-            </div>
-            <div className="portfolio__list-item">
-              <p>Work in progress</p>
-            </div>
-            <div className="portfolio__list-item">
-              <p>Work in progress</p>
-            </div>
-            <div className="portfolio__list-item">
-              <p>Work in progress</p>
-            </div>
-            <div className="portfolio__list-item">
-              <p>Work in progress</p>
-            </div>
-            <div className="portfolio__list-item">
-              <p>Work in progress</p>
-            </div>
-          </PortfolioList>
-        </PortfolioWrapper>
-      </div>
-    </StyledPortfolio>
-  );
+  const [element, controls] = useScroll();
+
+  if (window.innerWidth > 450) {
+    return (
+      <StyledPortfolio id={"portfolio"}>
+        <div className="container">
+          <PortfolioWrapper>
+            <h2>Portfolio</h2>
+            <PortfolioList
+              variants={listAnim}
+              animate={controls}
+              initial="hidden"
+              ref={element}
+            >
+              <motion.div
+                variants={edItemAnim}
+                className="portfolio__list-item"
+              >
+                <a href="https://vladrozanov987.github.io/music-app/">
+                  <img
+                    className="portfolio-bg"
+                    src={musicApp}
+                    alt="music app"
+                  />
+                </a>
+              </motion.div>
+              <motion.div
+                variants={edItemAnim}
+                className="portfolio__list-item"
+              >
+                <p>Work in progress</p>
+              </motion.div>
+              <motion.div
+                variants={edItemAnim}
+                className="portfolio__list-item"
+              >
+                <p>Work in progress</p>
+              </motion.div>
+              <motion.div
+                variants={edItemAnim}
+                className="portfolio__list-item"
+              >
+                <p>Work in progress</p>
+              </motion.div>
+              <motion.div
+                variants={edItemAnim}
+                className="portfolio__list-item"
+              >
+                <p>Work in progress</p>
+              </motion.div>
+              <motion.div
+                variants={edItemAnim}
+                className="portfolio__list-item"
+              >
+                <p>Work in progress</p>
+              </motion.div>
+            </PortfolioList>
+          </PortfolioWrapper>
+        </div>
+      </StyledPortfolio>
+    );
+  } else {
+    return (
+      <StyledPortfolio id={"portfolio"}>
+        <div className="container">
+          <PortfolioWrapper>
+            <h2>Portfolio</h2>
+            <PortfolioList
+              variants={listAnim}
+              animate={controls}
+              initial="hidden"
+              ref={element}
+            >
+              <motion.div
+                variants={edItemAnim}
+                className="portfolio__list-item"
+              >
+                <a href="https://vladrozanov987.github.io/music-app/">
+                  <img
+                    className="portfolio-bg"
+                    src={musicApp}
+                    alt="music app"
+                  />
+                </a>
+              </motion.div>
+              <motion.div
+                variants={edItemAnim}
+                className="portfolio__list-item"
+              >
+                <p>Work in progress</p>
+              </motion.div>
+              <motion.div
+                variants={edItemAnim}
+                className="portfolio__list-item"
+              >
+                <p>Work in progress</p>
+              </motion.div>
+            </PortfolioList>
+          </PortfolioWrapper>
+        </div>
+      </StyledPortfolio>
+    );
+  }
 };
 
 const StyledPortfolio = styled.div`
@@ -49,7 +126,7 @@ const PortfolioWrapper = styled.div`
   }
 `;
 
-const PortfolioList = styled.div`
+const PortfolioList = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -82,7 +159,6 @@ const PortfolioList = styled.div`
   }
   @media screen and (max-width: 450px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
   }
 `;
 
