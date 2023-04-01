@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import musicApp from "../img/music-app.png";
 import bestEats from "../img/bestEats.jpg";
+import capture from "../img/capture.jpg";
 
 //Animations
 import { motion } from "framer-motion";
@@ -39,18 +40,16 @@ const Portfolio = () => {
                 className="portfolio__list-item"
               >
                 <a href="https://tailwind-test-omega.vercel.app/">
-                  <img
-                    className="portfolio-bg"
-                    src={bestEats}
-                    alt="music app"
-                  />
+                  <img className="portfolio-bg" src={bestEats} alt="bestEats" />
                 </a>
               </motion.div>
               <motion.div
                 variants={edItemAnim}
                 className="portfolio__list-item"
               >
-                <p>Work in progress</p>
+                <a href="https://capture-tau-one.vercel.app/">
+                  <img className="portfolio-bg" src={capture} alt="capture" />
+                </a>
               </motion.div>
               <motion.div
                 variants={edItemAnim}
