@@ -39,7 +39,7 @@ const Portfolio = () => {
                 variants={edItemAnim}
                 className="portfolio__list-item"
               >
-                <a href="https://tailwind-test-omega.vercel.app/">
+                <a href="https://tailwind-test-gules.vercel.app/">
                   <img className="portfolio-bg" src={bestEats} alt="bestEats" />
                 </a>
               </motion.div>
@@ -102,7 +102,7 @@ const Portfolio = () => {
                 variants={edItemAnim}
                 className="portfolio__list-item"
               >
-                <a href="https://tailwind-test-omega.vercel.app/">
+                <a href="https://tailwind-test-gules.vercel.app/">
                   <img className="portfolio-bg" src={bestEats} alt="bestEats" />
                 </a>
               </motion.div>
