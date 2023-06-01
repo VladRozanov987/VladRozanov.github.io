@@ -1,7 +1,10 @@
 import styled from "styled-components";
+
+// Images
 import musicApp from "../img/music-app.png";
 import bestEats from "../img/bestEats.jpg";
 import capture from "../img/capture.jpg";
+import trevland from "../img/trevland.jpg";
 
 //Animations
 import { motion } from "framer-motion";
@@ -55,7 +58,9 @@ const Portfolio = () => {
                 variants={edItemAnim}
                 className="portfolio__list-item"
               >
-                <p>Work in progress</p>
+                <a href="https://vladrozanov987.github.io/trevland/">
+                  <img className="portfolio-bg" src={trevland} alt="trevland" />
+                </a>
               </motion.div>
               <motion.div
                 variants={edItemAnim}
