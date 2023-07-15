@@ -44,7 +44,7 @@ const Education = () => {
           </motion.div>
           <motion.div variants={edItemAnim} className="line">
             <div className="year">
-              <p>2022-...</p>
+              <p>2022-2022</p>
             </div>
             <div className="main">
               The Creative React and Redux Course (DevelopedByEd)

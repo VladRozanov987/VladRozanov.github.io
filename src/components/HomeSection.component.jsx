@@ -26,7 +26,7 @@ const HomeSection = () => {
             animate={{ scale: 1, transition: { duration: 1, delay: 1 } }}
             initial={{ scale: 0 }}
           >
-            Still <span>not</span> even a junior front-end developer
+            front-end developer
           </motion.p>
         </MainHome>
       </div>
