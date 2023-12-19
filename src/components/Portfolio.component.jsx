@@ -5,6 +5,7 @@ import musicApp from "../img/music-app.png";
 import bestEats from "../img/bestEats.jpg";
 import capture from "../img/capture.jpg";
 import trevland from "../img/trevland.jpg";
+import furniShop from "../img/furniShop.jpg";
 
 //Animations
 import { motion } from "framer-motion";
@@ -66,7 +67,13 @@ const Portfolio = () => {
                 variants={edItemAnim}
                 className="portfolio__list-item"
               >
-                <p>Work in progress</p>
+                <a href="https://furni-shop-cja7shs39-vladrozanov987.vercel.app/">
+                  <img
+                    className="portfolio-bg"
+                    src={furniShop}
+                    alt="furniShop"
+                  />
+                </a>
               </motion.div>
               <motion.div
                 variants={edItemAnim}
