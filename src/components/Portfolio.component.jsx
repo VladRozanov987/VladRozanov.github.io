@@ -15,126 +15,52 @@ import { useScroll } from "../useScroll";
 
 const Portfolio = () => {
   const [element, controls] = useScroll();
-
-  if (window.innerWidth > 450) {
-    return (
-      <StyledPortfolio id={"portfolio"}>
-        <div className="container">
-          <PortfolioWrapper>
-            <h2>Portfolio</h2>
-            <PortfolioList
-              variants={listAnim}
-              animate={controls}
-              initial="hidden"
-              ref={element}
-            >
-              <motion.div
-                variants={edItemAnim}
-                className="portfolio__list-item"
-              >
-                <a href="https://vladrozanov987.github.io/music-app/">
-                  <img
-                    className="portfolio-bg"
-                    src={musicApp}
-                    alt="music app"
-                  />
-                </a>
-              </motion.div>
-              <motion.div
-                variants={edItemAnim}
-                className="portfolio__list-item"
-              >
-                <a href="https://tailwind-test-gules.vercel.app/">
-                  <img className="portfolio-bg" src={bestEats} alt="bestEats" />
-                </a>
-              </motion.div>
-              <motion.div
-                variants={edItemAnim}
-                className="portfolio__list-item"
-              >
-                <a href="https://capture-tau-one.vercel.app/">
-                  <img className="portfolio-bg" src={capture} alt="capture" />
-                </a>
-              </motion.div>
-              <motion.div
-                variants={edItemAnim}
-                className="portfolio__list-item"
-              >
-                <a href="https://vladrozanov987.github.io/trevland/">
-                  <img className="portfolio-bg" src={trevland} alt="trevland" />
-                </a>
-              </motion.div>
-              <motion.div
-                variants={edItemAnim}
-                className="portfolio__list-item"
-              >
-                <a href="https://furni-shop-cja7shs39-vladrozanov987.vercel.app/">
-                  <img
-                    className="portfolio-bg"
-                    src={furniShop}
-                    alt="furniShop"
-                  />
-                </a>
-              </motion.div>
-              <motion.div
-                variants={edItemAnim}
-                className="portfolio__list-item"
-              >
-                <a href="https://vladrozanov987.github.io/vikings/">
-                  <img className="portfolio-bg" src={vikings} alt="vikings" />
-                </a>
-              </motion.div>
-            </PortfolioList>
-          </PortfolioWrapper>
-        </div>
-      </StyledPortfolio>
-    );
-  } else {
-    return (
-      <StyledPortfolio id={"portfolio"}>
-        <div className="container">
-          <PortfolioWrapper>
-            <h2>Portfolio</h2>
-            <PortfolioList
-              variants={listAnim}
-              animate={controls}
-              initial="hidden"
-              ref={element}
-            >
-              <motion.div
-                variants={edItemAnim}
-                className="portfolio__list-item"
-              >
-                <a href="https://vladrozanov987.github.io/music-app/">
-                  <img
-                    className="portfolio-bg"
-                    src={musicApp}
-                    alt="music app"
-                  />
-                </a>
-              </motion.div>
-              <motion.div
-                variants={edItemAnim}
-                className="portfolio__list-item"
-              >
-                <a href="https://tailwind-test-gules.vercel.app/">
-                  <img className="portfolio-bg" src={bestEats} alt="bestEats" />
-                </a>
-              </motion.div>
-              <motion.div
-                variants={edItemAnim}
-                className="portfolio__list-item"
-              >
-                <a href="https://capture-tau-one.vercel.app/">
-                  <img className="portfolio-bg" src={capture} alt="capture" />
-                </a>
-              </motion.div>
-            </PortfolioList>
-          </PortfolioWrapper>
-        </div>
-      </StyledPortfolio>
-    );
-  }
+  return (
+    <StyledPortfolio id={"portfolio"}>
+      <div className="container">
+        <PortfolioWrapper>
+          <h2>Portfolio</h2>
+          <PortfolioList
+            variants={listAnim}
+            animate={controls}
+            initial="hidden"
+            ref={element}
+          >
+            <motion.div variants={edItemAnim} className="portfolio__list-item">
+              <a href="https://vladrozanov987.github.io/music-app/">
+                <img className="portfolio-bg" src={musicApp} alt="music app" />
+              </a>
+            </motion.div>
+            <motion.div variants={edItemAnim} className="portfolio__list-item">
+              <a href="https://tailwind-test-gules.vercel.app/">
+                <img className="portfolio-bg" src={bestEats} alt="bestEats" />
+              </a>
+            </motion.div>
+            <motion.div variants={edItemAnim} className="portfolio__list-item">
+              <a href="https://capture-tau-one.vercel.app/">
+                <img className="portfolio-bg" src={capture} alt="capture" />
+              </a>
+            </motion.div>
+            <motion.div variants={edItemAnim} className="portfolio__list-item">
+              <a href="https://vladrozanov987.github.io/trevland/">
+                <img className="portfolio-bg" src={trevland} alt="trevland" />
+              </a>
+            </motion.div>
+            <motion.div variants={edItemAnim} className="portfolio__list-item">
+              <a href="https://furni-shop-cja7shs39-vladrozanov987.vercel.app/">
+                <img className="portfolio-bg" src={furniShop} alt="furniShop" />
+              </a>
+            </motion.div>
+            <motion.div variants={edItemAnim} className="portfolio__list-item">
+              <a href="https://vladrozanov987.github.io/vikings/">
+                <img className="portfolio-bg" src={vikings} alt="vikings" />
+              </a>
+            </motion.div>
+          </PortfolioList>
+        </PortfolioWrapper>
+      </div>
+    </StyledPortfolio>
+  );
 };
 
 const StyledPortfolio = styled.div`
