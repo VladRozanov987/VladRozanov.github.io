@@ -11,7 +11,7 @@ const MobileNav = () => {
   const openBtn = (
     <FiMenu
       className="hamburger"
-      size="30px"
+      size="29px"
       color="white"
       onClick={() => setIsOpen(!isOpen)}
     />
@@ -20,7 +20,7 @@ const MobileNav = () => {
   const closeBtn = (
     <AiOutlineClose
       className="hamburger"
-      size="30px"
+      size="29px"
       color="white"
       onClick={() => setIsOpen(!isOpen)}
     />
