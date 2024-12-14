@@ -47,7 +47,7 @@ const Portfolio = () => {
               </a>
             </motion.div>
             <motion.div variants={edItemAnim} className="portfolio__list-item">
-              <a href="https://furni-shop-cja7shs39-vladrozanov987.vercel.app/">
+              <a href="https://furni-shop-red.vercel.app/">
                 <img className="portfolio-bg" src={furniShop} alt="furniShop" />
               </a>
             </motion.div>
