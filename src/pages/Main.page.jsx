@@ -5,36 +5,38 @@ import avatar from "../img/avatar.jpg";
 //Styled
 import styled from "styled-components";
 
-//Framer motion
-import { motion } from "framer-motion";
+//Animations
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const HomeSection = () => {
-  const titleAnim = {
-    hidden: { scale: 0 },
-    show: { scale: 1, transition: { duration: 1 } },
-  };
+
+    useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, []);
 
   return (
     <StyledHome id={"about"}>
       <div className="container">
         <MainHome>
-          <img src={avatar} alt="avatar" />
-          <motion.h2 variants={titleAnim} animate="show" initial="hidden">
+          <img src={avatar} alt="avatar" data-aos="fade-up" />
+          <h2 data-aos="fade-up">
             Vladyslav Rozanov
-          </motion.h2>
-          <motion.p
-            animate={{ scale: 1, transition: { duration: 1, delay: 1 } }}
-            initial={{ scale: 0 }}
-          >
+          </h2>
+          <p data-aos="fade-up">
             front-end developer
-          </motion.p>
+          </p>
         </MainHome>
       </div>
     </StyledHome>
   );
 };
 
-const StyledHome = styled(motion.div)`
+const StyledHome = styled.div`
   position: relative;
   width: 100%;
   min-height: calc(100vh - 77px);

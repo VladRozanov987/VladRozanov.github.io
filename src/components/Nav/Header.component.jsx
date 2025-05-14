@@ -1,9 +1,15 @@
+// Styled
 import styled from "styled-components";
+
+// Components
+import MobNav from "./MobNav.component";
+import DeskNav from "./DeskNav.component";
+
+// Router
+import { Link } from "react-router-dom";
+
 //Import icons
 import { IoRoseOutline } from "react-icons/io5";
-//Links
-import NavLinks from "./DesktopNav";
-import MobileNav from "./MobileNav";
 
 const Nav = () => {
   return (
@@ -15,8 +21,8 @@ const Nav = () => {
             <span>Roza</span>nov
           </h2>
         </Title>
-        <NavLinks className="main__nav" />
-        <MobileNav className="mobile__nav" />
+        <MobNav/>
+        <DeskNav/>
       </NavContainer>
     </StyledNav>
   );
