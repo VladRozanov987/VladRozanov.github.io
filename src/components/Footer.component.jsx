@@ -9,7 +9,7 @@ import {
 
 const Contacts = () => {
   return (
-    <StyledContacts>
+    <StyledContacts id={"contacts"}>
       <div className="container">
         <ContactsWrapper>
           <ul>

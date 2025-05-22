@@ -5,24 +5,50 @@ import styled from "styled-components";
 import MobNav from "./MobNav.component";
 import DeskNav from "./DeskNav.component";
 
-// Router
-import { Link } from "react-router-dom";
-
 //Import icons
 import { IoRoseOutline } from "react-icons/io5";
+import { FaTelegramPlane, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Nav = () => {
   return (
     <StyledNav>
       <NavContainer>
-        <Title>
+        <Title
+          onClick={() => window.location.reload()}
+          style={{ cursor: "pointer" }}
+        >
           <IoRoseOutline className="nav-svg" size="30px" />
-          <h2>
+          <h1>
             <span>Roza</span>nov
-          </h2>
+          </h1>
         </Title>
-        <MobNav/>
-        <DeskNav/>
+        <ul className="social-list">
+          <li>
+            <a
+              href="https://www.instagram.com/vvladrozanov/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <FaInstagram size="30" />
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/AGRL4" rel="noreferrer" target="_blank">
+              <FaTelegramPlane size="30" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/vlad-rozanov-90789b249/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <FaLinkedinIn size="30" />
+            </a>
+          </li>
+        </ul>
+        <MobNav />
+        <DeskNav />
       </NavContainer>
     </StyledNav>
   );
@@ -45,6 +71,10 @@ const NavContainer = styled.div`
   max-width: 1440px;
   width: 90%;
   margin: 0 auto;
+
+  .social-list > li > a {
+    margin-right: 1rem;
+  }
 `;
 
 const Title = styled.div`
@@ -63,7 +93,7 @@ const Title = styled.div`
       color: white;
     }
   }
-  h2 {
+  h1 {
     font-size: 2rem;
   }
   span {

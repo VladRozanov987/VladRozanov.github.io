@@ -1,21 +1,31 @@
 // Styled
 import styled from "styled-components";
 
-// Router
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Links = (props) => {
   return (
     <StyledLinks>
       <ul>
         <li onClick={() => props.isMobile && props.closeMobMenu()}>
-          <Link to="/">About</Link>
+          <Link to="about" smooth={true} duration={500} offset={-70}>
+            About
+          </Link>
         </li>
         <li onClick={() => props.isMobile && props.closeMobMenu()}>
-          <Link to="skills">Skills</Link>
+          <Link to="skills" smooth={true} duration={500} offset={-70}>
+            Skills
+          </Link>
         </li>
         <li onClick={() => props.isMobile && props.closeMobMenu()}>
-          <Link to="portfolio">Portfolio</Link>
+          <Link to="portfolio" smooth={true} duration={500} offset={-70}>
+            Portfolio
+          </Link>
+        </li>
+        <li onClick={() => props.isMobile && props.closeMobMenu()}>
+          <Link to="contacts" smooth={true} duration={500} offset={-70}>
+            Contacts
+          </Link>
         </li>
       </ul>
     </StyledLinks>

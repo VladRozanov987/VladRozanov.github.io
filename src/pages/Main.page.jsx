@@ -5,33 +5,34 @@ import avatar from "../img/avatar.jpg";
 //Styled
 import styled from "styled-components";
 
+//Components
+import Skills from "../components/Skills.component";
+import Portfolio from "../components/Portfolio.component";
+
 //Animations
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const HomeSection = () => {
-
-    useEffect(() => {
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-    }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <StyledHome id={"about"}>
       <div className="container">
         <MainHome>
           <img src={avatar} alt="avatar" data-aos="fade-up" />
-          <h2 data-aos="fade-up">
-            Vladyslav Rozanov
-          </h2>
-          <p data-aos="fade-up">
-            front-end developer
-          </p>
+          <h2 data-aos="fade-up">Vladyslav Rozanov</h2>
+          <p data-aos="fade-up">front-end developer</p>
         </MainHome>
       </div>
+      <Skills />
+      <Portfolio />
     </StyledHome>
   );
 };

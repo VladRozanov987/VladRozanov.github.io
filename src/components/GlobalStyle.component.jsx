@@ -15,10 +15,16 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
   }
 
+  h2 {
+    color: #b41616;
+    margin-bottom: 2rem;
+  }
+
   ul {
     list-style: none;
     display: flex;
     li > a {
+      cursor: pointer;
       text-decoration: none;
       color: white;
       font-size: 1.25rem;

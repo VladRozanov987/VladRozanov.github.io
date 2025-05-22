@@ -29,46 +29,40 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const Skills = () => {
-  
-      useEffect(() => {
-        AOS.init({
-          duration: 1000,
-          once: true,
-          easing: "ease-in-out",
-        });
-      }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
 
-      const skills = [
-        { icon: <FaHtml5 />, name: "HTML5" },
-        { icon: <FaCss3Alt />, name: "CSS3" },
-        { icon: <FaSass />, name: "SCSS" },
-        { icon: <FaBootstrap />, name: "Bootstrap" },
-        { icon: <SiTailwindcss />, name: "Tailwind" },
-        { icon: <SiStyledcomponents />, name: "Styled Components" },
-        { icon: <SiJavascript />, name: "JavaScript" },
-        { icon: <SiTypescript />, name: "TypeScript" },
-        { icon: <FaReact />, name: "React" },
-        { icon: <FaAngular />, name: "Angular" },
-        { icon: <SiWebpack />, name: "Webpack" },
-        { icon: <FaGitAlt />, name: "Git" },
-        { icon: <FaGithub />, name: "GitHub" },
-        { icon: <FaFigma />, name: "Figma" },
-        { icon: <FaPhp />, name: "PHP" },
-      ];
-      
+  const skills = [
+    { icon: <FaHtml5 />, name: "HTML5" },
+    { icon: <FaCss3Alt />, name: "CSS3" },
+    { icon: <FaSass />, name: "SCSS" },
+    { icon: <FaBootstrap />, name: "Bootstrap" },
+    { icon: <SiTailwindcss />, name: "Tailwind" },
+    { icon: <SiStyledcomponents />, name: "Styled Components" },
+    { icon: <SiJavascript />, name: "JavaScript" },
+    { icon: <SiTypescript />, name: "TypeScript" },
+    { icon: <FaReact />, name: "React" },
+    { icon: <FaAngular />, name: "Angular" },
+    { icon: <SiWebpack />, name: "Webpack" },
+    { icon: <FaGitAlt />, name: "Git" },
+    { icon: <FaGithub />, name: "GitHub" },
+    { icon: <FaFigma />, name: "Figma" },
+    { icon: <FaPhp />, name: "PHP" },
+  ];
 
   return (
-    <StyledSkills>
+    <StyledSkills id={"skills"}>
       <div className="container">
         <SkillsWrapper>
-          <h2>My Skills</h2>
+          <h2>Skills</h2>
           <SkillsGrid>
             {skills.map((skill, index) => (
-              <div
-                className="skill-item"
-                key={index}
-                data-aos="fade-up"
-              >
+              <div className="skill-item" key={index} data-aos="fade-in">
                 <div className="icon">{skill.icon}</div>
                 <div className="label">{skill.name}</div>
               </div>
@@ -83,32 +77,17 @@ const Skills = () => {
 const StyledSkills = styled.div`
   background-color: #242424;
   color: white;
-  overflow: auto;
-  min-height: calc(100vh - 77px);
-  margin-top: 77px;
 `;
 
 const SkillsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: calc(100vh - 77px);
   text-align: center;
   padding: 2rem 0;
-  h2 {
-    color: #b41616;
-    margin-bottom: 1rem;
-  }
 `;
 
 const SkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, minmax(140px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 0;
-  width: 100%;
+  gap: 2rem;
 
   .skill-item {
     display: flex;
@@ -151,7 +130,5 @@ const SkillsGrid = styled.div`
     grid-template-columns: repeat(1, minmax(140px, 1fr));
   }
 `;
-
-
 
 export default Skills;
