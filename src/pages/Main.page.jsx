@@ -1,6 +1,6 @@
 //Import img
 import mainBg from "../img/main-bg.webp";
-import avatar from "../img/avatar.jpg";
+import avatar from "../img/ava.png";
 import { FaTelegramPlane, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 //Styled
