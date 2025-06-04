@@ -1,6 +1,7 @@
 //Import img
 import mainBg from "../img/main-bg.webp";
 import avatar from "../img/avatar.jpg";
+import { FaTelegramPlane, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 //Styled
 import styled from "styled-components";
@@ -13,6 +14,7 @@ import Portfolio from "../components/Portfolio.component";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { AiFillGithub } from "react-icons/ai";
 
 const HomeSection = () => {
   useEffect(() => {
@@ -29,6 +31,40 @@ const HomeSection = () => {
           <img src={avatar} alt="avatar" data-aos="fade-up" />
           <h2 data-aos="fade-up">Vladyslav Rozanov</h2>
           <p data-aos="fade-up">front-end developer</p>
+          <ul className="social-list" data-aos="fade-up">
+            <li>
+              <a
+                href="https://www.instagram.com/vvladrozanov/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FaInstagram size="30" />
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/AGRL4" rel="noreferrer" target="_blank">
+                <FaTelegramPlane size="30" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/VladRozanov987"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <AiFillGithub style={{ width: "30px", height: "30px" }} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/vlad-rozanov-90789b249/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FaLinkedinIn size="30" />
+              </a>
+            </li>
+          </ul>
         </MainHome>
       </div>
       <Skills />
@@ -86,6 +122,12 @@ const MainHome = styled.div`
     color: #b41616;
     font-weight: bold;
     font-size: 1.5rem;
+  }
+  .social-list {
+    margin-top: 1.5rem;
+  }
+  .social-list > li > a {
+    margin: 1rem;
   }
 `;
 

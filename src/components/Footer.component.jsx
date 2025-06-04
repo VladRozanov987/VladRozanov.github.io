@@ -3,9 +3,9 @@ import styled from "styled-components";
 import {
   AiOutlineInstagram,
   AiFillGithub,
-  AiOutlineFacebook,
   AiOutlineLinkedin,
 } from "react-icons/ai";
+import { FaTelegramPlane } from "react-icons/fa";
 
 const Contacts = () => {
   return (
@@ -23,17 +23,17 @@ const Contacts = () => {
               </a>
             </li>
             <li>
+              <a href="https://t.me/AGRL4" rel="noreferrer" target="_blank">
+                <FaTelegramPlane size="30" />
+              </a>
+            </li>
+            <li>
               <a
                 href="https://github.com/VladRozanov987"
                 rel="noreferrer"
                 target="_blank"
               >
                 <AiFillGithub style={{ width: "30px", height: "30px" }} />
-              </a>
-            </li>
-            <li>
-              <a href="https://facebook.com/" rel="noreferrer" target="_blank">
-                <AiOutlineFacebook style={{ width: "30px", height: "30px" }} />
               </a>
             </li>
             <li>

@@ -7,7 +7,6 @@ import DeskNav from "./DeskNav.component";
 
 //Import icons
 import { IoRoseOutline } from "react-icons/io5";
-import { FaTelegramPlane, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Nav = () => {
   return (
@@ -22,31 +21,6 @@ const Nav = () => {
             <span>Roza</span>nov
           </h1>
         </Title>
-        <ul className="social-list">
-          <li>
-            <a
-              href="https://www.instagram.com/vvladrozanov/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <FaInstagram size="30" />
-            </a>
-          </li>
-          <li>
-            <a href="https://t.me/AGRL4" rel="noreferrer" target="_blank">
-              <FaTelegramPlane size="30" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/vlad-rozanov-90789b249/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <FaLinkedinIn size="30" />
-            </a>
-          </li>
-        </ul>
         <MobNav />
         <DeskNav />
       </NavContainer>
@@ -71,10 +45,6 @@ const NavContainer = styled.div`
   max-width: 1440px;
   width: 90%;
   margin: 0 auto;
-
-  .social-list > li > a {
-    margin-right: 1rem;
-  }
 `;
 
 const Title = styled.div`
